@@ -6,7 +6,6 @@ using System;
 public class Anchar : MonoBehaviour
 {
 	private static Anchar instance = null;
-
 	// Game Instance Singleton
 	public static Anchar Instance
 	{
@@ -15,14 +14,14 @@ public class Anchar : MonoBehaviour
 			return instance; 
 		}
 	}
-
 	private void Awake()
 	{
-		// if the singleton hasn't been initialized yet
+
 		if (instance != null && instance != this) 
 		{
 			Destroy(this.gameObject);
 		}
+		// if the singleton hasn't been initialized yet
 		instance = this;
 		DontDestroyOnLoad( this.gameObject );
 	}

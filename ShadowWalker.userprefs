@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prototype/Rotate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prototype/CameraShake.cs">
     <Files>
-      <File FileName="Assets/Prototype/Rotate.cs" Line="30" Column="26" />
-      <File FileName="Assets/Prototype/CharMove.cs" Line="37" Column="53" />
-      <File FileName="Assets/Prototype/Anchar.cs" Line="67" Column="61" />
+      <File FileName="Assets/Prototype/CameraShake.cs" Line="19" Column="44" />
+      <File FileName="Assets/Prototype/Rotate.cs" Line="1" Column="1" />
+      <File FileName="Assets/Prototype/CharMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/Prototype/Anchar.cs" Line="8" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

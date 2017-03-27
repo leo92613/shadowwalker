@@ -12,7 +12,7 @@ public class Rotate : MonoBehaviour {
 	private AudioSource au;
 	private CameraShake shake;
 	void Start () {
-		moveControl = GameObject.Find ("Andy").GetComponent<CharMove> ();
+		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		au = GameObject.Find ("AudioEffect").GetComponent<AudioSource> ();
 		shake = GameObject.Find ("Main Camera").GetComponent<CameraShake> ();
 	}
