@@ -62,7 +62,7 @@ public class Anchar : MonoBehaviour
 				hitobject.GetComponent<ChangeCameraSize> ().enabled = true;
 			if (hitobject.GetComponent<EndGame> ())
 				hitobject.GetComponent<EndGame> ().enabled = true;
-			if (hitobject.GetComponent<Rotate> ()) {
+			if (hitobject.GetComponent<Rotate> () && hitobject.GetComponent<Rotate>().enabled) {
 				hitobject.GetComponent<Rotate> ().RotationEnable = true;
 				hitobject.GetComponent<MeshRenderer> ().material = anchorhit;
 				if (isPressed) {
