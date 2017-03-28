@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EndGame : MonoBehaviour {
-
+	public Rotate StartPoint;
 	// Use this for initialization
 	void Start () {
-		Camera.main.gameObject.GetComponent<CameraFollow> ().enabled = false;
-		Camera.main.transform.position = new Vector3 (transform.position.x, transform.position.y, -20.0f);
+		//Camera.main.gameObject.GetComponent<CameraFollow> ().enabled = false;
+		//Camera.main.transform.position = new Vector3 (transform.position.x, transform.position.y, -20.0f);
 	}
 	
 	// Update is called once per frame

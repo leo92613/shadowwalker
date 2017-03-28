@@ -11,10 +11,12 @@ public class Rotate : MonoBehaviour {
 	//public Anchar an;
 	private AudioSource au;
 	private CameraShake shake;
+	private Quaternion OriginRotation;
 	void Start () {
 		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		au = GameObject.Find ("AudioEffect").GetComponent<AudioSource> ();
 		shake = GameObject.Find ("Main Camera").GetComponent<CameraShake> ();
+		OriginRotation = transform.localRotation;
 	}
 
 	void OnEnable(){
@@ -49,5 +51,10 @@ public class Rotate : MonoBehaviour {
 		moveControl.enabled = false;
 		Anchar.Instance.isAbled = false;
 		StartCoroutine (Rot());
+	}
+
+	public void ResetRotation()
+	{
+		transform.localRotation = OriginRotation;
 	}
 }

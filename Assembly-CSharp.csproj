@@ -51,6 +51,7 @@
      <Compile Include="Assets\Prototype\CameraShake.cs" />
      <Compile Include="Assets\Prototype\ChangeCameraSize.cs" />
      <Compile Include="Assets\Prototype\CharMove.cs" />
+     <Compile Include="Assets\Prototype\CheckPoint.cs" />
      <Compile Include="Assets\Prototype\EndGame.cs" />
      <Compile Include="Assets\Prototype\Restart.cs" />
      <Compile Include="Assets\Prototype\Rotate.cs" />
