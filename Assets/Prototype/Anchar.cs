@@ -63,8 +63,9 @@ public class Anchar : MonoBehaviour
 		if (hitobject != null) {
 			if (hitobject.GetComponent<ChangeCameraSize> ())
 				hitobject.GetComponent<ChangeCameraSize> ().enabled = true;
-			if (hitobject.GetComponent<EndGame> ())
+			if (hitobject.GetComponent<EndGame> ()) {
 				hitobject.GetComponent<EndGame> ().enabled = true;
+			}
 			if (hitobject.GetComponent<CheckPoint> ()) {
 				if (!CheckPoints.Contains (hitobject.GetComponent<CheckPoint> ()))
 					CheckPoints.Add (hitobject.GetComponent<CheckPoint> ());

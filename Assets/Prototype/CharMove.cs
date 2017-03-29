@@ -30,19 +30,19 @@ public class CharMove : MonoBehaviour
         anchor.localPosition = new Vector3();
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s")) {
             isPressed = true;
-            anchor.localPosition = new Vector3(0, -0.05f, 0);
+            anchor.localPosition = new Vector3(0, -0.1f, 0);
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w")) {
 			isPressed = true;
-			anchor.localPosition = new Vector3 (0, 0.05f, 0);
+			anchor.localPosition = new Vector3 (0, 0.1f, 0);
 		}
 		if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey("a")) {
-			anchor.localPosition = new Vector3 (-0.05f, 0, 0);
+			anchor.localPosition = new Vector3 (-0.1f, 0, 0);
 			isPressed = true;
 			sprite.flipX = true;
 		}
 		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey("d")) {
-			anchor.localPosition = new Vector3 (0.05f, 0, 0);
+			anchor.localPosition = new Vector3 (0.1f, 0, 0);
 			isPressed = true;
 			sprite.flipX = false;
 		}
