@@ -52,9 +52,11 @@
      <Compile Include="Assets\Prototype\ChangeCameraSize.cs" />
      <Compile Include="Assets\Prototype\CharMove.cs" />
      <Compile Include="Assets\Prototype\CheckPoint.cs" />
+     <Compile Include="Assets\Prototype\Cube.cs" />
      <Compile Include="Assets\Prototype\EndGame.cs" />
      <Compile Include="Assets\Prototype\Restart.cs" />
      <Compile Include="Assets\Prototype\Rotate.cs" />
+     <Compile Include="Assets\Prototype\TransProjection.cs" />
      <None Include="Assets\Materials\Particle Add.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

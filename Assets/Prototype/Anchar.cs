@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Anchar : MonoBehaviour
 {
@@ -22,12 +23,8 @@ public class Anchar : MonoBehaviour
 		{
 			Destroy(this.gameObject);
 		}
-		// if the singleton hasn't been initialized yet
 		instance = this;
-		DontDestroyOnLoad( this.gameObject );
 	}
-
-
 
 
 	public delegate void TriggerRotation();
@@ -56,6 +53,8 @@ public class Anchar : MonoBehaviour
 			isPressed = true;
 		if (Input.GetKeyDown(KeyCode.P))
 			CheckPoints[CheckPoints.Count - 1].ReturnToThisPoint();
+		if (Input.GetKeyDown(KeyCode.R))
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 	// Update is called once per frame
 	void LateUpdate ()
@@ -72,7 +71,16 @@ public class Anchar : MonoBehaviour
 			}
 			if (hitobject.GetComponent<Rotate> () && hitobject.GetComponent<Rotate>().enabled) {
 				hitobject.GetComponent<Rotate> ().RotationEnable = true;
-				hitobject.GetComponent<MeshRenderer> ().material = anchorhit;
+				hitobject.GetComponent<Rotate> ().Mat = anchorhit;
+				if (isPressed) {
+					isPressed = false;
+					onRotate ();
+				}
+			}
+
+			if (hitobject.GetComponent<TransProjection> () && hitobject.GetComponent<TransProjection>().enabled) {
+				hitobject.GetComponent<TransProjection> ().RotationEnable = true;
+				hitobject.GetComponent<TransProjection> ().Mat = anchorhit;
 				if (isPressed) {
 					isPressed = false;
 					onRotate ();

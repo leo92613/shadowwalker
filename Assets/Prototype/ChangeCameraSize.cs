@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeCameraSize : MonoBehaviour {
+public class ChangeCameraSize : Cube {
 	public float size;
-
 	public Rotate StartPoint;
+
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
 		StartPoint.enabled = true;
 	}
 	

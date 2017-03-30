@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPoint : MonoBehaviour {
+public class CheckPoint : Cube {
 	Rotate[] children;
 	// Use this for initialization
 	void Start () {
