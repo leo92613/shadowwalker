@@ -29,7 +29,7 @@ public class Cube : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	protected void Start () {
 		parent = transform.parent;
 		originRot = transform.localRotation;
 	}

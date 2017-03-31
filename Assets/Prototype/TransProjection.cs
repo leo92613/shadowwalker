@@ -25,6 +25,7 @@ public class TransProjection : Cube {
 
 
 	void Start () {
+		base.Start ();
 		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		au = GameObject.Find ("AudioEffect").GetComponent<AudioSource> ();
 		shake = GameObject.Find ("Main Camera").GetComponent<CameraShake> ();
@@ -57,13 +58,16 @@ public class TransProjection : Cube {
 	}
 
 	private void SetParent(){
+		this.transform.parent = null;
 		foreach (Cube c in AllCubes)
 			c.transform.parent = transform;
 	}
 
 	private void ResetParent(){
+		
 		foreach (Cube c in AllCubes)
 			c.ResetParent ();
+		this.transform.parent = parent;
 	}
 
 	public void StartRotate(){

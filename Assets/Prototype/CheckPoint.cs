@@ -6,6 +6,7 @@ public class CheckPoint : Cube {
 	Rotate[] children;
 	// Use this for initialization
 	void Start () {
+		base.Start ();
 		children = transform.GetComponentsInChildren<Rotate> ();
 	}
 	

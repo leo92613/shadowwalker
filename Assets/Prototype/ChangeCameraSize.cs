@@ -5,16 +5,28 @@ using UnityEngine;
 public class ChangeCameraSize : Cube {
 	public float size;
 	public Rotate StartPoint;
+	private bool changeCamera;
 
-	// Use this for initialization
-	void OnEnable () {
-		StartPoint.enabled = true;
+	public bool ChangeCamera {
+		set {
+			changeCamera = value;
+		}
 	}
+	// Use this for initialization
+	void Start(){
+		base.Start ();
+		changeCamera = false;
+		StartPoint.Activated = false;
+	}
+		
 	
 	// Update is called once per frame
 	void Update () {
-		Camera.main.orthographicSize = Camera.main.orthographicSize + (size - Camera.main.orthographicSize) / 10.0f;
+		if (changeCamera) {
+			StartPoint.Activated = true;
+			Camera.main.orthographicSize = Camera.main.orthographicSize + (size - Camera.main.orthographicSize) / 10.0f;
+		}
 		if (Mathf.Abs (Camera.main.orthographicSize - size) < 0.05f)
-			this.GetComponent<ChangeCameraSize> ().enabled = false;
+			changeCamera = false;
 	}
 }

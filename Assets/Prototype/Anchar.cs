@@ -61,15 +61,15 @@ public class Anchar : MonoBehaviour
 	{
 		if (hitobject != null) {
 			if (hitobject.GetComponent<ChangeCameraSize> ())
-				hitobject.GetComponent<ChangeCameraSize> ().enabled = true;
+				hitobject.GetComponent<ChangeCameraSize> ().ChangeCamera  = true;
 			if (hitobject.GetComponent<EndGame> ()) {
-				hitobject.GetComponent<EndGame> ().enabled = true;
+				hitobject.GetComponent<EndGame> ().End= true;
 			}
 			if (hitobject.GetComponent<CheckPoint> ()) {
 				if (!CheckPoints.Contains (hitobject.GetComponent<CheckPoint> ()))
 					CheckPoints.Add (hitobject.GetComponent<CheckPoint> ());
 			}
-			if (hitobject.GetComponent<Rotate> () && hitobject.GetComponent<Rotate>().enabled) {
+			if (hitobject.GetComponent<Rotate> () && hitobject.GetComponent<Rotate>().Activated) {
 				hitobject.GetComponent<Rotate> ().RotationEnable = true;
 				hitobject.GetComponent<Rotate> ().Mat = anchorhit;
 				if (isPressed) {

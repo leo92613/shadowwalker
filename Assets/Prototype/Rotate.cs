@@ -8,6 +8,7 @@ public class Rotate : Cube {
 	private AudioSource au;
 	private CameraShake shake;
 	private bool rotationenable;
+	private bool activate = true;
 
 	public Vector3 rot;
 	public Material idlemateral;
@@ -21,9 +22,19 @@ public class Rotate : Cube {
 			return rotationenable;
 		}
 	}
+
+	public bool Activated {
+		set {
+			activate = value;
+		}
+		get {
+			return activate;
+		}
+	}
 		
 
 	void Start () {
+		base.Start ();
 		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		au = GameObject.Find ("AudioEffect").GetComponent<AudioSource> ();
 		shake = GameObject.Find ("Main Camera").GetComponent<CameraShake> ();
@@ -40,6 +51,7 @@ public class Rotate : Cube {
 	// Update is called once per frame
 	void Update () {
 		RotationEnable = false;
+		if(activate)
 		Mat = idlemateral;
 	}
 
@@ -55,6 +67,8 @@ public class Rotate : Cube {
 
 	public void StartRotate(){
 		if (!RotationEnable)
+			return;
+		if (!Activated)
 			return;
 		au.Play ();
 		shake.StartShake ();
