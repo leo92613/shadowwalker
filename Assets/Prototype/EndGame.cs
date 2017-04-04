@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGame : Cube {
-	public Rotate StartPoint;
+	public int SceneIndex;
 
 
 	private AudioSource Au;
@@ -25,9 +26,14 @@ public class EndGame : Cube {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if (end) {
+			this.GetComponent<ShowMaterial> ().Activate ();
 			play ();
+			if(Input.GetKeyDown(KeyCode.Space)) 
+				SceneManager.LoadScene(SceneIndex);
 			end = false;
 		}
+			
 	}
 }
