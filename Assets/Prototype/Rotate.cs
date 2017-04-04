@@ -13,7 +13,6 @@ public class Rotate : Cube {
 	public Vector3 rot;
 	public Material idlemateral;
 
-
 	public bool RotationEnable {
 		set {
 			rotationenable = value;
@@ -53,6 +52,17 @@ public class Rotate : Cube {
 		RotationEnable = false;
 		if(activate)
 		Mat = idlemateral;
+
+	}
+
+	void LateUpdate(){
+		if (RotationEnable) {
+			Material tmp = this.GetComponent<Renderer> ().material;
+			ShowMaterial[] kids = GetComponentsInChildren<ShowMaterial> ();
+			for (int i = 0; i < kids.Length; i++)
+				kids [i].Activate ();
+			this.GetComponent<Renderer> ().material = tmp;
+		}
 	}
 
 	private IEnumerator Rot(){

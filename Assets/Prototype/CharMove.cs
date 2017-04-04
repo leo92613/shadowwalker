@@ -9,6 +9,7 @@ public class CharMove : MonoBehaviour
 	private SpriteRenderer sprite;
 	private Animator ani;
 	private bool isPressed;
+	private Anchar anchar;
 
 
 	public Transform anchor;
@@ -18,6 +19,7 @@ public class CharMove : MonoBehaviour
 	{
 		sprite = GetComponent<Renderer> () as SpriteRenderer;
 		ani = this.GetComponent<Animator> ();
+		anchar = GetComponentInChildren<Anchar>();
 		isPressed = false;
 	    ani.enabled = true;
 	}
@@ -48,6 +50,15 @@ public class CharMove : MonoBehaviour
 		}
 		ray = new Ray (anchor.position, Vector3.forward);
 		if (Physics.Raycast (ray, out hit)) {
+			if (hit.transform.GetComponent<CheckPoint> ()) {
+				anchar.AddCheckpoint (hit.transform.GetComponent<CheckPoint> ());
+			}
+
+			if (hit.transform.GetComponent<ChangeCameraSize> ())
+				hit.transform.GetComponent<ChangeCameraSize> ().ChangeCamera  = true;
+			if (hit.transform.GetComponent<EndGame> ()) {
+				hit.transform.GetComponent<EndGame> ().End= true;
+			}
 			this.transform.position += anchor.localPosition ;
 		}
 		sprite.sprite = idleSprite;
