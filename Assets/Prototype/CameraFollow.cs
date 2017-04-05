@@ -29,7 +29,6 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
 
-        Debug.Log(cam);
         if (Vector2.Distance(cam, cha) > maxdis)
         {
             //Debug.Log (Vector2.Distance (cam, cha));

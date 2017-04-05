@@ -18,7 +18,16 @@ public class CameraShake : MonoBehaviour {
 		shake = 0.0f;
 		origin_Pos = cam.transform.localPosition;
 	}
-	
+
+	void OnEnable()
+	{
+		Anchar.TriggeredRotation += StartShake;
+	}
+
+	void OnDisable()
+	{
+		Anchar.TriggeredRotation -= StartShake;
+	}
 	// Update is called once per frame
 	void Update () {
 		if (shake > 0) {

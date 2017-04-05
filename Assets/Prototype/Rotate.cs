@@ -6,7 +6,6 @@ public class Rotate : Cube {
 
 	private CharMove moveControl;
 	private AudioSource au;
-	private CameraShake shake;
 	private bool rotationenable;
 	private bool activate = true;
 
@@ -36,7 +35,6 @@ public class Rotate : Cube {
 		base.Start ();
 		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		au = GameObject.Find ("AudioEffect").GetComponent<AudioSource> ();
-		shake = GameObject.Find ("Main Camera").GetComponent<CameraShake> ();
 	}
 
 	void OnEnable(){
@@ -76,12 +74,21 @@ public class Rotate : Cube {
 	}
 
 	public void StartRotate(){
-		if (!RotationEnable)
+		if (!RotationEnable) {
 			return;
+		}
 		if (!Activated)
 			return;
 		au.Play ();
-		shake.StartShake ();
+		moveControl.enabled = false;
+		Anchar.Instance.isAbled = false;
+		StartCoroutine (Rot());
+	}
+
+	public void RemoteRotate(){
+		if (!Activated)
+			return;
+		au.Play ();
 		moveControl.enabled = false;
 		Anchar.Instance.isAbled = false;
 		StartCoroutine (Rot());

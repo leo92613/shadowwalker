@@ -7,7 +7,6 @@ public class TransProjection : Cube {
 	// Use this for initialization
 	private CharMove moveControl;
 	private AudioSource au;
-	private CameraShake shake;
 	private bool rotationenable;
 	private Cube[] AllCubes;
 
@@ -28,7 +27,6 @@ public class TransProjection : Cube {
 		base.Start ();
 		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		au = GameObject.Find ("AudioEffect").GetComponent<AudioSource> ();
-		shake = GameObject.Find ("Main Camera").GetComponent<CameraShake> ();
 	}
 
 	void OnEnable(){
@@ -75,7 +73,6 @@ public class TransProjection : Cube {
 			return;
 		SetParent ();
 		au.Play ();
-		shake.StartShake ();
 		moveControl.enabled = false;
 		Anchar.Instance.isAbled = false;
 

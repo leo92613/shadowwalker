@@ -79,6 +79,15 @@ public class Anchar : MonoBehaviour
 					onRotate ();
 				}
 			}
+
+			if (hitobject.GetComponent<Remote> () && hitobject.GetComponent<Remote>().enabled) {
+				hitobject.GetComponent<Remote> ().RotationEnable = true;
+				hitobject.GetComponent<Remote> ().Mat = anchorhit;
+				if (isPressed) {
+					isPressed = false;
+					onRotate ();
+				}
+			}
 		}
 	}
 
