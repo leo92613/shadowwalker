@@ -25,6 +25,7 @@ public class Remote : Cube {
 	// Use this for initialization
 	void Start () {
 		base.Start ();
+		RotCube.Activated = false;
 	}
 
 	void OnEnable(){

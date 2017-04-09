@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: face6
-  m_Shader: {fileID: 4800000, guid: ec6a1ba79678f419eae78c2343c87ba0, type: 3}
+  m_Shader: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHABLEND_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0

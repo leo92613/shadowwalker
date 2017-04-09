@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,9 @@ public class GenLevel : MonoBehaviour {
 	public GameObject RotCube;
 	// Use this for initialization
 	void Start () {
+		GameObject TmpCheck;
+		GameObject TmpCube;
+		GameObject TmpRot;
 		Instantiate(L, new Vector3(0, 0, -15), Quaternion.identity);
 		int lastDirection = 0;
 		int x = 0;
@@ -20,7 +23,7 @@ public class GenLevel : MonoBehaviour {
 			while (lastDirection == dir%3) {
 				dir = Random.Range (1, 7);
 			}
-			Instantiate (Check, new Vector3 (x, y, z), Quaternion.identity);
+			TmpCheck = Instantiate (Check, new Vector3 (x, y, z), Quaternion.identity);
 			for (int k = 1; k < num; k++) {
 				if (dir == 1) {
 					x++;
@@ -35,7 +38,8 @@ public class GenLevel : MonoBehaviour {
 				} else if (dir == 6) {
 					z--;
 				}
-				Instantiate (Cube, new Vector3 (x, y, z), Quaternion.identity);
+				TmpCube = Instantiate (Cube, new Vector3 (x, y, z), Quaternion.identity);
+				TmpCube.transform.parent = TmpCheck.transform;
 			}
 			if (dir == 1) {
 				x++;

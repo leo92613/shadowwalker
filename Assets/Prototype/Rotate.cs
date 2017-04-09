@@ -86,8 +86,6 @@ public class Rotate : Cube {
 	}
 
 	public void RemoteRotate(){
-		if (!Activated)
-			return;
 		au.Play ();
 		moveControl.enabled = false;
 		Anchar.Instance.isAbled = false;
