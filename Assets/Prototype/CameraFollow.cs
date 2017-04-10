@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    private bool DEBUG = true;
+
     public Transform ch, came;
     public float maxdis;
     private Vector2 cam, cha;
-    // Use this for initialization
+
+    private float max_zoom = 15;
+    private float min_zoom = 5;
+
     void Start()
     {
 
@@ -39,15 +44,19 @@ public class CameraFollow : MonoBehaviour
 
     void changeZoom(float zoom)
     {
+        float currentSize = Camera.main.orthographicSize;
+        if (DEBUG) Debug.Log(currentSize);
         zoom = zoom * -1;
-        if (zoom > 0f) // zoom in
+        if (zoom > 0f && currentSize < max_zoom) // zoom in
         {
             Camera.main.orthographicSize = Camera.main.orthographicSize + zoom * 5f;
+            if (DEBUG) Debug.Log("out");
         }
 
-        else if (zoom < 0f) // zoom out
+        else if (zoom < 0f && currentSize > min_zoom) // zoom out
         {
             Camera.main.orthographicSize = Camera.main.orthographicSize + zoom * 5f;
+            if (DEBUG) Debug.Log("in");
         }
     
     }
