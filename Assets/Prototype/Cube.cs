@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : MonoBehaviour {
+public class Cube : MonoBehaviour
+{
 	[SerializeField] protected Transform parent;
 	[SerializeField] protected Quaternion originRot;
+	protected Vector3 originPos;
 
 	public Transform Parent {
 		set {
@@ -24,18 +26,26 @@ public class Cube : MonoBehaviour {
 		}
 	}
 
-	public void ResetParent(){
+	public void ResetParent ()
+	{
 		transform.parent = parent;
 	}
 
 	// Use this for initialization
-	protected void Start () {
+	protected void Start ()
+	{
 		parent = transform.parent;
-		originRot = transform.localRotation;
+		transform.parent = null;
+		originPos = transform.position;
+		//originRot = transform.localRotation;
+		originRot = transform.rotation;
+		transform.parent = parent;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void ResetRotation ()
+	{
+		transform.position = originPos;
+		transform.rotation = originRot;
+		print ("Reset");
 	}
 }

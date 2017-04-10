@@ -3,17 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPoint : Cube {
-	Rotate[] children;
+	Transform[] children;
 	// Use this for initialization
 	void Start () {
 		base.Start ();
-		children = transform.GetComponentsInChildren<Rotate> ();
+		children = transform.GetComponentsInChildren<Transform> ();
 	}
 	
 	public void ReturnToThisPoint()
 	{
 		GameObject.Find("Landy").transform.position = new Vector3(transform.position.x,transform.position.y,GameObject.Find("Landy").transform.position.z);
-		foreach (Rotate r in children)
-			r.ResetRotation ();
+		foreach (Transform r in children) {
+			r.transform.parent = null;
+		}
+		foreach (Transform r in children) {
+			r.GetComponent<Cube>().ResetRotation ();
+		}
+		foreach (Transform r in children) {
+			r.parent = r.GetComponent<Cube>().Parent;
+		}
 	}
+
+
 }

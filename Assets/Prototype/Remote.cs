@@ -41,10 +41,6 @@ public class Remote : Cube {
 		RotCube.RemoteRotate ();
 	}
 
-	public void ResetRotation()
-	{
-		transform.localRotation = base.originRot;
-	}
 
 	void Update(){
 		RotationEnable = false;

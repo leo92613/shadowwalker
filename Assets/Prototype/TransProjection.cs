@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TransProjection : Cube {
-	[SerializeField] private Vector3 Rot;
+public class TransProjection : Cube
+{
+	public Vector3 Rot;
+
+	[SerializeField] private bool IsTransProjection;
 	// Use this for initialization
 	private CharMove moveControl;
 	private AudioSource au;
@@ -23,28 +26,33 @@ public class TransProjection : Cube {
 	}
 
 
-	void Start () {
+	void Start ()
+	{
 		base.Start ();
 		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		au = GameObject.Find ("AudioEffect").GetComponent<AudioSource> ();
 	}
 
-	void OnEnable(){
+	void OnEnable ()
+	{
 		AllCubes = GameObject.FindObjectsOfType<Cube> ();
 		Anchar.TriggeredRotation += StartRotate;
 	}
 
-	void OnDisable(){
+	void OnDisable ()
+	{
 		Anchar.TriggeredRotation -= StartRotate;
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		RotationEnable = false;
 		Mat = idlemateral;
 	}
 
-	private IEnumerator Trans(){
+	private IEnumerator Trans ()
+	{
 		Vector3 _rot = Rot / 20f;
 		for (int i = 0; i < 20; i++) {
 			yield return new WaitForSeconds (0.06f);
@@ -53,22 +61,27 @@ public class TransProjection : Cube {
 		moveControl.enabled = true;
 		Anchar.Instance.isAbled = true;
 		ResetParent ();
+		if (IsTransProjection)
+			Rot = -Rot;
 	}
 
-	private void SetParent(){
+	private void SetParent ()
+	{
 		this.transform.parent = null;
 		foreach (Cube c in AllCubes)
 			c.transform.parent = transform;
 	}
 
-	private void ResetParent(){
+	private void ResetParent ()
+	{
 		
 		foreach (Cube c in AllCubes)
 			c.ResetParent ();
 		this.transform.parent = parent;
 	}
 
-	public void StartRotate(){
+	public void StartRotate ()
+	{
 		if (!RotationEnable)
 			return;
 		SetParent ();
@@ -76,15 +89,11 @@ public class TransProjection : Cube {
 		moveControl.enabled = false;
 		Anchar.Instance.isAbled = false;
 
-		StartCoroutine (Trans());
+		StartCoroutine (Trans ());
 
 	}
 
 
 
-	public void ResetRotation()
-	{
-		transform.localRotation = base.originRot;
-	}
 
 }

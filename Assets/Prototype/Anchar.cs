@@ -80,6 +80,17 @@ public class Anchar : MonoBehaviour
 				}
 			}
 
+			if (hitobject.GetComponent<TransProjectTionPartly> () && hitobject.GetComponent<TransProjectTionPartly>().enabled) {
+				hitobject.GetComponent<TransProjectTionPartly> ().RotationEnable = true;
+				hitobject.GetComponent<TransProjectTionPartly> ().Mat = anchorhit;
+				if (isPressed) {
+					isPressed = false;
+					Debug.Log("TransProjectionPartly");
+					onRotate ();
+
+				}
+			}
+
 			if (hitobject.GetComponent<Remote> () && hitobject.GetComponent<Remote>().enabled) {
 				hitobject.GetComponent<Remote> ().RotationEnable = true;
 				hitobject.GetComponent<Remote> ().Mat = anchorhit;
