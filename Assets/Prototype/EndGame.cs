@@ -8,6 +8,8 @@ public class EndGame : Cube {
 
 
 	private AudioSource Au;
+
+	private CharMove moveControl;
 	private bool end;
 
 	public bool End {
@@ -18,6 +20,7 @@ public class EndGame : Cube {
 
 	void Start(){
 		base.Start ();
+		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 	}
 	void play () {
 		if (this.GetComponent<AudioSource> ())
@@ -27,13 +30,29 @@ public class EndGame : Cube {
 	// Update is called once per frame
 	void Update () {
 		
-		if (end) {
-			this.GetComponent<ShowMaterial> ().Activate ();
-			play ();
-			if(Input.GetKeyDown(KeyCode.Space)) 
-				SceneManager.LoadScene(SceneIndex);
-			end = false;
+//		if (end) {
+//			this.GetComponent<ShowMaterial> ().Activate ();
+//			play ();
+//			if(Input.GetKeyDown(KeyCode.Space)) 
+//				SceneManager.LoadScene(SceneIndex);
+//			end = false;
+//		}			
+	}
+
+	public void NextLevel()
+	{
+		moveControl.enabled = false;
+		StartCoroutine (EndG ());
+	}
+
+	private IEnumerator EndG()
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			Camera.main.orthographicSize = Camera.main.orthographicSize + -0.08f * 5f;
+			yield return new WaitForSeconds(0.02f);
 		}
-			
+		moveControl.enabled = true;
+		SceneManager.LoadScene(SceneIndex);
 	}
 }

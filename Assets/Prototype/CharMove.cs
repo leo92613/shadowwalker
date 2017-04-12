@@ -52,13 +52,14 @@ public class CharMove : MonoBehaviour
 		if (Physics.Raycast (ray, out hit)) {
 			if (hit.transform.GetComponent<CheckPoint> ()) {
 				anchar.AddCheckpoint (hit.transform.GetComponent<CheckPoint> ());
+				hit.transform.GetComponent<CheckPoint> ().IsHit = true;
 			}
 
-			if (hit.transform.GetComponent<ChangeCameraSize> ())
-				hit.transform.GetComponent<ChangeCameraSize> ().ChangeCamera  = true;
-			if (hit.transform.GetComponent<EndGame> ()) {
-				hit.transform.GetComponent<EndGame> ().End= true;
-			}
+//			if (hit.transform.GetComponent<ChangeCameraSize> ())
+//				hit.transform.GetComponent<ChangeCameraSize> ().ChangeCamera  = true;
+//			if (hit.transform.GetComponent<EndGame> ()) {
+//				hit.transform.GetComponent<EndGame> ().End= true;
+//			}
 			this.transform.position += anchor.localPosition ;
 		}
 		sprite.sprite = idleSprite;

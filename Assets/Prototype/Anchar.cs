@@ -8,6 +8,7 @@ public class Anchar : MonoBehaviour
 {
 	private static Anchar instance = null;
 	private List<CheckPoint> CheckPoints;
+	private int CheckPointsCount;
 	// Game Instance Singleton
 	public static Anchar Instance
 	{
@@ -24,6 +25,7 @@ public class Anchar : MonoBehaviour
 			Destroy(this.gameObject);
 		}
 		instance = this;
+		CheckPointsCount = GameObject.FindObjectsOfType<CheckPoint> ().Length;
 	}
 
 
@@ -43,6 +45,8 @@ public class Anchar : MonoBehaviour
 
 	void Update ()
 	{
+		if (CheckPoints.Count == CheckPointsCount)
+			this.GetComponent<EndGame> ().NextLevel ();
 		isPressed = false;
 		hitobject = null;
 		ray = new Ray (transform.position, Vector3.forward);
