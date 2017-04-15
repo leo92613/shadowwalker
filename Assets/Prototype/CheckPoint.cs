@@ -8,6 +8,7 @@ public class CheckPoint : Cube {
 	private bool ishit;
 
     private Material pastMaterial;
+
 	public bool CloseMap;
 	public bool IsHit {
 		set {

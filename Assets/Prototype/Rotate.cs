@@ -11,7 +11,7 @@ public class Rotate : Cube {
 
 	public Vector3 rot;
 	public Material idlemateral;
-
+	public bool isWorld = false;
 	public bool RotationEnable {
 		set {
 			rotationenable = value;
@@ -67,7 +67,10 @@ public class Rotate : Cube {
 		Vector3 _rot = rot / 20f;
 		for (int i = 0; i < 20; i++) {
 			yield return new WaitForSeconds (0.06f);
-			this.transform.Rotate (_rot);
+			if (isWorld)
+				this.transform.Rotate (_rot, relativeTo: Space.World);
+			else
+				this.transform.Rotate (_rot);
 		}
 		moveControl.enabled = true;
 		Anchar.Instance.isAbled = true;

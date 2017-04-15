@@ -103,11 +103,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439565315192058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5caa15878c0a44ddb20c12fd5f86318, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d334cee0547f44e396999a84958469f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   originRot: {x: 0, y: 0, z: 0, w: 0}
+  CloseMap: 0
 --- !u!114 &114958653830646144
 MonoBehaviour:
   m_ObjectHideFlags: 1
