@@ -20,7 +20,7 @@ public class EndGame : Cube {
 
 	void Start(){
 		base.Start ();
-		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
+		moveControl = GameObject.FindGameObjectWithTag("GameController").GetComponent<CharMove>();
 	}
 	void play () {
 		if (this.GetComponent<AudioSource> ())

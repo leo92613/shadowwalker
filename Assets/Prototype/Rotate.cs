@@ -33,8 +33,9 @@ public class Rotate : Cube {
 
 	void Start () {
 		base.Start ();
-		moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
-		au = GameObject.Find ("AudioEffect").GetComponent<AudioSource> ();
+		//moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
+		moveControl = GameObject.FindGameObjectWithTag("GameController").GetComponent<CharMove>();
+		au = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource> ();
 	}
 
 	void OnEnable(){

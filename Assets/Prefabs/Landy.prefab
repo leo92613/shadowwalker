@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4527666998670144}
   - component: {fileID: 114685432082641888}
+  - component: {fileID: 114718015285880888}
   m_Layer: 0
   m_Name: HitAnchor
   m_TagString: Untagged
@@ -38,7 +39,7 @@ GameObject:
   - component: {fileID: 82032779478488516}
   m_Layer: 0
   m_Name: AudioEffect
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +61,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1695167894075422
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +96,7 @@ GameObject:
   - component: {fileID: 114995831190564290}
   m_Layer: 0
   m_Name: Landy
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,8 +406,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ab274dec58e4cc58071612cb3381ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CheckPointsCount: 0
   isAbled: 1
   anchorhit: {fileID: 2100000, guid: 7ba96c35a3dfd4f99995126920ff3628, type: 2}
+--- !u!114 &114718015285880888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1431561368767092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f85d2e67d4a84a5cb2e045446508043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  originRot: {x: 0, y: 0, z: 0, w: 0}
+  SceneIndex: 0
 --- !u!114 &114995831190564290
 MonoBehaviour:
   m_ObjectHideFlags: 1

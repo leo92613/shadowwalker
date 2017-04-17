@@ -7,8 +7,15 @@ using UnityEngine.SceneManagement;
 public class Anchar : MonoBehaviour
 {
 	private static Anchar instance = null;
-	private List<CheckPoint> CheckPoints;
-	private int CheckPointsCount;
+	private List<CheckPoint> CheckPoints = new List<CheckPoint>();
+	public int CheckPointsCount;
+
+	public int PointCount {
+		get {
+			return CheckPoints.Count;
+		}
+	}
+
 	// Game Instance Singleton
 	public static Anchar Instance
 	{
@@ -46,7 +53,7 @@ public class Anchar : MonoBehaviour
 	void Update ()
 	{
 		if (CheckPoints.Count == CheckPointsCount)
-			this.GetComponent<EndGame> ().NextLevel ();
+			//this.GetComponent<EndGame> ().NextLevel ();
 		isPressed = false;
 		hitobject = null;
 		ray = new Ray (transform.position, Vector3.forward);

@@ -61,6 +61,7 @@ public class levelparserscript : MonoBehaviour
 
     public void loadLevel()
     {
+        resetCubeList();
         parseLevel(level_file);
     }
 

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Retro.unity
+- path: Assets/Scenes/level_template.unity
   isLoaded: 1
   isActive: 1
