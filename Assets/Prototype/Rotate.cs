@@ -11,7 +11,7 @@ public class Rotate : Cube {
 
 	public Vector3 rot;
 	public Material idlemateral;
-	public bool isWorld = false;
+	public bool isWorld = true;
 	public bool RotationEnable {
 		set {
 			rotationenable = value;
