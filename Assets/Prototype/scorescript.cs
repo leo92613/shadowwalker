@@ -13,8 +13,10 @@ public class scorescript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		int total = GameObject.Find("HitAnchor").GetComponent<Anchar>().PointCount;
-        GetComponent<Text>().text = total + "";
-        if (DEBUG) Debug.Log("current score " + total);
+		//int total;
+		//if (GameObject.Find("HitAnchor") != null)
+		 //total = GameObject.Find("HitAnchor").GetComponent<Anchar>().PointCount;
+//        GetComponent<Text>().text = total + "";
+  //      if (DEBUG) Debug.Log("current score " + total);
 	}
 }

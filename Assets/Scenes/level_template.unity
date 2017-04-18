@@ -150,6 +150,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc1c3cc51c1af4528823a44a2f1b6d29, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &437502948
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4613421742135462, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613421742135462, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613421742135462, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613421742135462, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613421742135462, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613421742135462, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613421742135462, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613421742135462, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &612346880
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +268,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 801325327}
         m_MethodName: loadLevel
         m_Mode: 1
         m_Arguments:
@@ -422,7 +464,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 801325327}
         m_MethodName: saveLevel
         m_Mode: 1
         m_Arguments:
@@ -570,11 +612,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DEBUG: 1
-  level_file: {fileID: 0}
-  L: {fileID: 0}
-  Check: {fileID: 0}
-  Cube: {fileID: 0}
-  RotCube: {fileID: 0}
+  level_file: {fileID: 4900000, guid: d98b64256ced54899b414535c5d0f1ab, type: 3}
+  L: {fileID: 1008995025}
+  Check: {fileID: 1439565315192058, guid: c7c2eaf66470745dbb38c3859b0dd572, type: 2}
+  Cube: {fileID: 1757722904550368, guid: fc1c3cc51c1af4528823a44a2f1b6d29, type: 2}
+  RotCube: {fileID: 1616425942626882, guid: 24d5557dff4f74060abfe2e03d77c7e8, type: 2}
 --- !u!4 &801325328
 Transform:
   m_ObjectHideFlags: 0
@@ -667,6 +709,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 980701455}
+--- !u!1 &1008995025 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1873297312909054, guid: a11eee3039dc14a0b946e9961a153c41,
+    type: 2}
+  m_PrefabInternal: {fileID: 437502948}
 --- !u!1 &1097500475
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +790,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 801325327}
         m_MethodName: generate
         m_Mode: 1
         m_Arguments:
@@ -1128,7 +1175,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1439565315192058, guid: c7c2eaf66470745dbb38c3859b0dd572, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7c2eaf66470745dbb38c3859b0dd572, type: 2}
@@ -1148,7 +1195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1685133661
 MonoBehaviour:
   m_ObjectHideFlags: 0
