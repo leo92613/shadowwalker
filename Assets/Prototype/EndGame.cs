@@ -49,7 +49,7 @@ public class EndGame : Cube {
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			Camera.main.orthographicSize = Camera.main.orthographicSize + -0.08f * 5f;
+			//Camera.main.orthographicSize = Camera.main.orthographicSize + -0.08f * 5f;
 			yield return new WaitForSeconds(0.02f);
 		}
 		moveControl.enabled = true;

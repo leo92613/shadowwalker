@@ -84,4 +84,4 @@ Material:
     - _MKGlowColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _MKGlowTexColor: {r: 1, g: 1, b: 1, a: 0.25}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TintColor: {r: 0.007352948, g: 0.95892483, b: 1, a: 0.059}
+    - _TintColor: {r: 0.023529412, g: 0.64705884, b: 0, a: 0.059}

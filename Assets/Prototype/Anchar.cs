@@ -53,7 +53,7 @@ public class Anchar : MonoBehaviour
 	void Update ()
 	{
 		if (CheckPoints.Count == CheckPointsCount)
-			//this.GetComponent<EndGame> ().NextLevel ();
+			this.GetComponent<EndGame> ().NextLevel ();
 		isPressed = false;
 		hitobject = null;
 		ray = new Ray (transform.position, Vector3.forward);
