@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/FindTheLight.unity
+- path: Assets/Scenes/RKey.unity
   isLoaded: 1
   isActive: 1
