@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    private bool DEBUG = true;
+    private bool DEBUG = false;
 
     public Transform ch, came;
     public float maxdis;

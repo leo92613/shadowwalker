@@ -12,7 +12,8 @@ public class GenLevel : MonoBehaviour {
 		GameObject TmpCheck;
 		GameObject TmpCube;
 		GameObject TmpRot;
-		Instantiate(L, new Vector3(0, 0, -15), Quaternion.identity);
+		//Instantiate(L, new Vector3(0, 0, -15), Quaternion.identity);
+		//L.transform.position = new Vector3(0, 0, -15);
 		int lastDirection = 0;
 		int x = 0;
 		int y = 0;

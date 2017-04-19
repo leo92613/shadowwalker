@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : Cube {
 	public int SceneIndex;
-
+	public bool isRandom = false;
 
 	private AudioSource Au;
 
@@ -42,6 +42,8 @@ public class EndGame : Cube {
 
 	public void NextLevel()
 	{
+		if (isRandom)
+			return;
 		moveControl.enabled = false;
 		StartCoroutine (EndG ());
 	}
