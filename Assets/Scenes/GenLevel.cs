@@ -1,4 +1,4 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,13 +7,15 @@ public class GenLevel : MonoBehaviour {
 	public GameObject Check;
 	public GameObject Cube;
 	public GameObject RotCube;
+
+	private List<GameObject> cubes;
 	// Use this for initialization
 	void Start () {
+		cubes = new List<GameObject> ();
 		GameObject TmpCheck;
 		GameObject TmpCube;
 		GameObject TmpRot;
 		//Instantiate(L, new Vector3(0, 0, -15), Quaternion.identity);
-		//L.transform.position = new Vector3(0, 0, -15);
 		int lastDirection = 0;
 		int x = 0;
 		int y = 0;
@@ -32,6 +34,20 @@ public class GenLevel : MonoBehaviour {
 			} else {
 				TmpCheck = Instantiate (RotCube, new Vector3 (x, y, z), Quaternion.identity);
 				TmpCheck.transform.parent = TmpRot.transform;
+				float w = 0;
+				float e = 0;
+				float q = 0;
+				int rnd2 = Random.Range (1,4);
+				if (rnd2 == 1) {
+					w = 90f;
+				} else if (rnd2 == 2) {
+					e = 90f;
+				} else {
+					q = 90f;
+				}
+				Vector3 rr = new Vector3 (w, e, q);
+				TmpCheck.GetComponent<Rotate> ().rot = rr;
+				cubes.Add (TmpCheck);
 			}
 			TmpRot = TmpCheck;
 			for (int k = 1; k < num; k++) {
@@ -50,7 +66,20 @@ public class GenLevel : MonoBehaviour {
 				}
 				TmpCube = Instantiate (RotCube, new Vector3 (x, y, z), Quaternion.identity);
 				TmpCube.transform.parent = TmpRot.transform;
-//				TmpRot.transform.Rotate (new Vector3(0,90,0));
+				float w = 0;
+				float e = 0;
+				float q = 0;
+				int rnd2 = Random.Range (1,4);
+				if (rnd2 == 1) {
+					w = 90f;
+				} else if (rnd2 == 2) {
+					e = 90f;
+				} else {
+					q = 90f;
+				}
+				Vector3 rr = new Vector3 (w, e, q);
+				TmpCube.GetComponent<Rotate> ().rot = rr;
+				cubes.Add(TmpCube);
 				TmpRot = TmpCube;
 			}
 			if (dir == 1) {
@@ -69,10 +98,31 @@ public class GenLevel : MonoBehaviour {
 			lastDirection = dir%3;
 			chck = Random.Range (1, 3);
 		}
+
+		for (int r = 0; r < cubes.Count; ++r) {
+			int rnd = Random.Range (1,30);
+			if (rnd % 10 <= 4) {
+				float w = 0;
+				float e = 0;
+				float q = 0;
+				int rnd2 = Random.Range (1,4);
+				if (rnd2 == 1) {
+					w = 90f;
+				} else if (rnd2 == 2) {
+					e = 90f;
+				} else {
+					q = 90f;
+				}
+				Vector3 rr = new Vector3 (w, e, q);
+				Debug.Log(rr);
+				cubes [r].transform.Rotate (rr,relativeTo:Space.World);
+			}
+		}
+		Anchar.Instance.SetCheckPoint ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 }

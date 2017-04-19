@@ -5,36 +5,36 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Opening.unity
     guid: a92c7474bafc743fa9ad3cb031b509e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ArrowKeyandSpaceKey.unity
     guid: 2f4716300c6e14c07a79c608bf9a6063
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FindTheLight.unity
     guid: 1af1971fe926249c29575645db67233e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/retro_Level_1.unity
     guid: 0a69ae1ccc993458a8d2518b50ac327e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/retro_Level_2.unity
     guid: 413e7cbca710643ba8c6ee33696f5652
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/retro_Level_3.unity
     guid: 23a045e1f2ec74d2e9ffe8fb5f46e6b1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RKey.unity
     guid: 76456c21d92374580808b4edfdc93ea4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/retro_Level_4.unity
     guid: dc04424d7d0bb46349f5e871e28cb39c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/retro_Level_5.unity
     guid: 99bb1ae0acb34486a83a09551956541e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/retro_Level_6.unity
     guid: 813a6727cf8934845b69bb9e556327df
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/retro_Level_7.unity
     guid: 10bbb11c0ce0c402bb2fae37c6bbabd1

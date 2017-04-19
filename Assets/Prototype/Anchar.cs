@@ -50,6 +50,11 @@ public class Anchar : MonoBehaviour
 		CheckPoints = new List<CheckPoint>();
 	}
 
+	public void SetCheckPoint()
+	{
+		CheckPointsCount = GameObject.FindObjectsOfType<CheckPoint> ().Length;
+	}
+
 	void Update ()
 	{
 		if (CheckPoints.Count == CheckPointsCount)
