@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -390,9 +388,7 @@ public class levelparserscript : MonoBehaviour
             }
         write = write + output[output.Length - 1];
         File.WriteAllText(Application.dataPath + "/gen_level.txt", write);
-		#if UNITY_EDITOR
         AssetDatabase.Refresh();
-		#endif
     }
 
     public void resetCubeList()
