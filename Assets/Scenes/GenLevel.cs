@@ -18,12 +18,21 @@ public class GenLevel : MonoBehaviour {
 		int y = 0;
 		int z = 0;
 		int dir = 0;
-		for (int i = 0; i<7;++i) {
+		int chck = 1;
+
+		TmpRot = Instantiate (Check, new Vector3 (x, y, z), Quaternion.identity);
+		for (int i = 0; i<10; ++i) {
 			int num = Random.Range (2, 6);
 			while (lastDirection == dir%3) {
 				dir = Random.Range (1, 7);
 			}
-			TmpCheck = Instantiate (Check, new Vector3 (x, y, z), Quaternion.identity);
+			if (chck % 2 == 0) {
+				TmpCheck = Instantiate (Check, new Vector3 (x, y, z), Quaternion.identity);
+			} else {
+				TmpCheck = Instantiate (RotCube, new Vector3 (x, y, z), Quaternion.identity);
+				TmpCheck.transform.parent = TmpRot.transform;
+			}
+			TmpRot = TmpCheck;
 			for (int k = 1; k < num; k++) {
 				if (dir == 1) {
 					x++;
@@ -38,8 +47,10 @@ public class GenLevel : MonoBehaviour {
 				} else if (dir == 6) {
 					z--;
 				}
-				TmpCube = Instantiate (Cube, new Vector3 (x, y, z), Quaternion.identity);
-				TmpCube.transform.parent = TmpCheck.transform;
+				TmpCube = Instantiate (RotCube, new Vector3 (x, y, z), Quaternion.identity);
+				TmpCube.transform.parent = TmpRot.transform;
+//				TmpRot.transform.Rotate (new Vector3(0,90,0));
+				TmpRot = TmpCube;
 			}
 			if (dir == 1) {
 				x++;
@@ -55,6 +66,7 @@ public class GenLevel : MonoBehaviour {
 				z--;
 			}
 			lastDirection = dir%3;
+			chck = Random.Range (1, 3);
 		}
 	}
 	
