@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/RKey.unity
+- path: Assets/Scenes/retro_Level_7.unity
   isLoaded: 1
   isActive: 1

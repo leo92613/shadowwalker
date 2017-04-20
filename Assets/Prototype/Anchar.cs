@@ -43,10 +43,12 @@ public class Anchar : MonoBehaviour
 	public static event TriggerRotation TriggeredRotation;
 	public bool isAbled = true;
 	public Material anchorhit;
+
 	private Ray ray;
 	private RaycastHit hit;
 	private bool isPressed;
 	private GameObject hitobject;
+	private Rotate lastRotate;
 	// Use this for initialization
 	void Start ()
 	{
@@ -90,13 +92,14 @@ public class Anchar : MonoBehaviour
 			if (hitobject.GetComponent<Rotate> () && hitobject.GetComponent<Rotate>().Activated) {
 				hitobject.GetComponent<Rotate> ().RotationEnable = true;
 				hitobject.GetComponent<Rotate> ().Mat = anchorhit;
-//				if (lastRotate != hitobject.GetComponent<Rotate> ()) {
-//					
-//					lastRotate = hitobject.GetComponent<Rotate> ();
-//				}
+
 				if (isPressed) {
 					isPressed = false;
 					UndoList.Add (hitobject.GetComponent<Rotate> ());
+					if (lastRotate != hitobject.GetComponent<Rotate> ()) {
+						lastRotate = hitobject.GetComponent<Rotate> ();
+						lastRotate.AddCPC ();
+					}
 					onRotate ();
 				}
 
@@ -142,5 +145,14 @@ public class Anchar : MonoBehaviour
 	public void AddCheckpoint(CheckPoint c){
 		if (!CheckPoints.Contains (c))
 			CheckPoints.Add (c);
+	}
+
+	public void RecordCheckpoint(CheckPoint c){
+		if (lastRotate != null)
+			lastRotate.AddCP (c);
+	}
+
+	public void RemoveCheckpoint(CheckPoint c){
+		CheckPoints.Remove (c);
 	}
 }

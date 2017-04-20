@@ -50,9 +50,10 @@ public class CharMove : MonoBehaviour
 		}
 		ray = new Ray (anchor.position, Vector3.forward);
 		if (Physics.Raycast (ray, out hit)) {
-			if (hit.transform.GetComponent<CheckPoint> ()) {
+			if (hit.transform.GetComponent<CheckPoint> () && (!hit.transform.GetComponent<CheckPoint> ().IsHit) ){
 				anchar.AddCheckpoint (hit.transform.GetComponent<CheckPoint> ());
 				hit.transform.GetComponent<CheckPoint> ().IsHit = true;
+				Anchar.Instance.RecordCheckpoint (hit.transform.GetComponent<CheckPoint> ());
 			}
 
 //			if (hit.transform.GetComponent<ChangeCameraSize> ())

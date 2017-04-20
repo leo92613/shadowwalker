@@ -37,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1616425942626882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,6 +110,7 @@ MonoBehaviour:
   originRot: {x: 0, y: 0, z: 0, w: 0}
   rot: {x: 90, y: 0, z: 0}
   idlemateral: {fileID: 2100000, guid: 861a13d074d6942e39ad3c9dec4b6a16, type: 2}
+  isWorld: 1
 --- !u!114 &114749419670028248
 MonoBehaviour:
   m_ObjectHideFlags: 1

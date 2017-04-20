@@ -9,6 +9,9 @@ public class Rotate : Cube {
 	private bool rotationenable;
 	private bool activate = true;
 	private int rotateTimes = 0;
+	private List<CheckPoint> cps = new List<CheckPoint>();
+	private List<int> cpc = new List<int> ();
+	private int cpcount = 0;
 
 	public Vector3 rot;
 	public Material idlemateral;
@@ -33,6 +36,7 @@ public class Rotate : Cube {
 		
 
 	void Start () {
+		cpc.Add (0);
 		base.Start ();
 		//moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		moveControl = GameObject.FindGameObjectWithTag("GameController").GetComponent<CharMove>();
@@ -96,6 +100,7 @@ public class Rotate : Cube {
 			rotateTimes--;
 			this.transform.Rotate (-rot, relativeTo: Space.World);
 		}
+		UndoCP ();
 		GameObject.FindGameObjectWithTag ("GameController").transform.position = new Vector3 (transform.position.x, transform.position.y, -15f);
 	}
 
@@ -104,6 +109,40 @@ public class Rotate : Cube {
 		moveControl.enabled = false;
 		Anchar.Instance.isAbled = false;
 		StartCoroutine (Rot());
+	}
+
+	public void AddCP(CheckPoint c){
+		cps.Add (c);
+		if (cpc.Count == 0)
+			cpc.Add (1);
+		else
+			cpc [cpc.Count - 1]++;
+		Debug.Log (cpc [cpc.Count - 1]);
+	}
+
+	public void AddCPC(){
+		cpc.Add (0);
+		//Debug.Log (cpc.Count);
+	}
+
+	private void UndoCP()
+	{
+		
+		int count = 0;
+		Debug.Log (" CPcount count: "+cpc.Count);
+		if (cpc.Count > 0) {
+			count = cpc [cpc.Count - 1];
+			cpc.RemoveAt (cpc.Count - 1);
+		}
+		//Debug.Log (name);
+		Debug.Log ("cp count: "+cps.Count);
+		Debug.Log (" count: "+count);
+
+		for (int i = 0; i < count; i++) {
+			cps [cps.Count - 1].IsHit = false;
+			Anchar.Instance.RemoveCheckpoint (cps [cps.Count - 1]);
+			cps.RemoveAt (cps.Count - 1);
+		}
 	}
 
 

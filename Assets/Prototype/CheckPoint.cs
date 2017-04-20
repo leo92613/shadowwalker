@@ -9,10 +9,12 @@ public class CheckPoint : Cube {
 
     private Material pastMaterial;
 
-	public bool CloseMap;
 	public bool IsHit {
 		set {
 			ishit = value;
+		}
+		get{
+			return ishit;
 		}
 	}
     
@@ -26,20 +28,13 @@ public class CheckPoint : Cube {
 
 	void Update()
 	{
-		if (CloseMap)
-			quad.SetActive (false);
     }
     void LateUpdate(){
         if (GetComponent<Renderer>().material.name != "PassCheckpoint" && ishit)
         {
             GetComponent<Renderer>().material = pastMaterial;
         }
-
-        if (CloseMap) {
-			if (ishit)
-				quad.SetActive (true);
-			ishit = false;
-		}
+			
 	}
 
 	public void ReturnToThisPoint()
