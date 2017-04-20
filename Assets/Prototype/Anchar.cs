@@ -8,7 +8,10 @@ public class Anchar : MonoBehaviour
 {
 	private static Anchar instance = null;
 	private List<CheckPoint> CheckPoints = new List<CheckPoint>();
+	private List<Rotate> UndoList = new List<Rotate> ();
+	//private Rotate lastRotate;
 	public int CheckPointsCount;
+
 
 	public int PointCount {
 		get {
@@ -67,10 +70,16 @@ public class Anchar : MonoBehaviour
 		}
 		if (Input.GetKeyDown (KeyCode.Space))
 			isPressed = true;
-		if (Input.GetKeyDown(KeyCode.P))
-			CheckPoints[CheckPoints.Count - 1].ReturnToThisPoint();
+		//if (Input.GetKeyDown(KeyCode.P))
+		//	CheckPoints[CheckPoints.Count - 1].ReturnToThisPoint();
 		if (Input.GetKeyDown(KeyCode.R))
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		if (Input.GetKeyDown (KeyCode.U)) {
+			if (UndoList.Count > 0) {
+				UndoList [UndoList.Count - 1].UndoRotate ();
+				UndoList.RemoveAt (UndoList.Count - 1);
+			}
+		}
 	}
 	// Update is called once per frame
 	void LateUpdate ()
@@ -81,10 +90,16 @@ public class Anchar : MonoBehaviour
 			if (hitobject.GetComponent<Rotate> () && hitobject.GetComponent<Rotate>().Activated) {
 				hitobject.GetComponent<Rotate> ().RotationEnable = true;
 				hitobject.GetComponent<Rotate> ().Mat = anchorhit;
+//				if (lastRotate != hitobject.GetComponent<Rotate> ()) {
+//					
+//					lastRotate = hitobject.GetComponent<Rotate> ();
+//				}
 				if (isPressed) {
 					isPressed = false;
+					UndoList.Add (hitobject.GetComponent<Rotate> ());
 					onRotate ();
 				}
+
 			}
 
 			if (hitobject.GetComponent<TransProjection> () && hitobject.GetComponent<TransProjection>().enabled) {
@@ -114,6 +129,7 @@ public class Anchar : MonoBehaviour
 					isPressed = false;
 					onRotate ();
 				}
+
 			}
 		}
 	}

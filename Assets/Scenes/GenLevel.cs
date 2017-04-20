@@ -102,20 +102,7 @@ public class GenLevel : MonoBehaviour {
 		for (int r = 0; r < cubes.Count; ++r) {
 			int rnd = Random.Range (1,30);
 			if (rnd % 10 <= 4) {
-				float w = 0;
-				float e = 0;
-				float q = 0;
-				int rnd2 = Random.Range (1,4);
-				if (rnd2 == 1) {
-					w = 90f;
-				} else if (rnd2 == 2) {
-					e = 90f;
-				} else {
-					q = 90f;
-				}
-				Vector3 rr = new Vector3 (w, e, q);
-				Debug.Log(rr);
-				cubes [r].transform.Rotate (rr,relativeTo:Space.World);
+				cubes [r].transform.Rotate (cubes[r].GetComponent<Rotate>().rot,relativeTo:Space.World);
 			}
 		}
 		Anchar.Instance.SetCheckPoint ();

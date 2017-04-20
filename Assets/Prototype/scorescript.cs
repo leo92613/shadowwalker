@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class scorescript : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class scorescript : MonoBehaviour
         if (GameObject.Find("HitAnchor") != null)
         {
             if (DEBUG) Debug.Log("hello");
-			GetComponent<Text>().text = "LIGHTS: " + (numCheckpoints ) + "/" + (total );
+			GetComponent<TMP_Text>().text = "LIGHTS: " + (numCheckpoints ) + "/" + (total );
             if (DEBUG) Debug.Log("current score " + total);
         }
     }

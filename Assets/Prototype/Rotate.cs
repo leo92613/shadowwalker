@@ -8,6 +8,7 @@ public class Rotate : Cube {
 	private AudioSource au;
 	private bool rotationenable;
 	private bool activate = true;
+	private int rotateTimes = 0;
 
 	public Vector3 rot;
 	public Material idlemateral;
@@ -87,6 +88,15 @@ public class Rotate : Cube {
 		moveControl.enabled = false;
 		Anchar.Instance.isAbled = false;
 		StartCoroutine (Rot());
+		rotateTimes++;
+	}
+
+	public void UndoRotate(){
+		if (rotateTimes > 0) {
+			rotateTimes--;
+			this.transform.Rotate (-rot, relativeTo: Space.World);
+		}
+		GameObject.FindGameObjectWithTag ("GameController").transform.position = new Vector3 (transform.position.x, transform.position.y, -15f);
 	}
 
 	public void RemoteRotate(){

@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Opening.unity
     guid: a92c7474bafc743fa9ad3cb031b509e6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ArrowKeyandSpaceKey.unity
     guid: 2f4716300c6e14c07a79c608bf9a6063
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/FindTheLight.unity
     guid: 1af1971fe926249c29575645db67233e
   - enabled: 0
@@ -38,3 +38,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/retro_Level_7.unity
     guid: 10bbb11c0ce0c402bb2fae37c6bbabd1
+  - enabled: 1
+    path: Assets/Scenes/level_template.unity
+    guid: a612d5581111849648178d25883903c4
