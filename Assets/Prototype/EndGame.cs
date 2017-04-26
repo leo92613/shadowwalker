@@ -50,9 +50,10 @@ public class EndGame : Cube {
 
 	private IEnumerator EndG()
 	{
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 30; i++)
 		{
-			Camera.main.orthographicSize = Camera.main.orthographicSize + -0.08f * 5f;
+			//Camera.main.orthographicSize = Camera.main.orthographicSize + -0.08f * 5f;
+			Camera.main.transform.Rotate(0,0,2f,relativeTo:Space.World);
 			yield return new WaitForSeconds(0.02f);
 		}
 		moveControl.enabled = true;

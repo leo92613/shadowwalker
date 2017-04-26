@@ -7,7 +7,7 @@ public class CameraShake : MonoBehaviour {
 	private Camera  cam; // set this via inspector
 	private float shake  = 0f;
 	private float shakeAmount = 0.1f;
-	private float decreaseFactor = 1.0f;
+	private float decreaseFactor = 3.0f;
 	private Vector3 origin_Pos;
 	private Vector2 shake_Trans;
 

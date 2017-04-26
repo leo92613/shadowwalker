@@ -72,7 +72,7 @@ public class Rotate : Cube {
 	private IEnumerator Rot(){
 		Vector3 _rot = rot / 20f;
 		for (int i = 0; i < 20; i++) {
-			yield return new WaitForSeconds (0.06f);
+			yield return new WaitForSeconds (0.02f);
 			if (isWorld)
 				this.transform.Rotate (_rot, relativeTo: Space.World);
 			else

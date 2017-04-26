@@ -10,6 +10,7 @@ public class CameraFollow : MonoBehaviour
 	public float maxdis;
 	private Vector2 cam, cha;
 
+	public bool zoomEnabled = true;
 	private float max_zoom = 15;
 	private float min_zoom = 5;
 
@@ -44,22 +45,29 @@ public class CameraFollow : MonoBehaviour
 
 	void changeZoom(float zoom)
 	{
-		float currentSize = Camera.main.orthographicSize;
-		if (DEBUG) Debug.Log(currentSize);
-		zoom = zoom * -2;
-		if (zoom > 0f && currentSize < max_zoom) // zoom in
+		if (zoomEnabled)
 		{
-			Camera.main.orthographicSize = Camera.main.orthographicSize + zoom * 5f;
-			if (DEBUG) Debug.Log("out");
+			float currentSize = Camera.main.orthographicSize;
+			if (DEBUG) Debug.Log(currentSize);
+			zoom = zoom * -2;
+			if (zoom > 0f && currentSize < max_zoom) // zoom in
+			{
+				Camera.main.orthographicSize = Camera.main.orthographicSize + zoom * 5f;
+				if (DEBUG) Debug.Log("out");
 
-			//GetComponent<Canvas>().transform.s
+				//GetComponent<Canvas>().transform.s
+			}
+
+			else if (zoom < 0f && currentSize > min_zoom) // zoom out
+			{
+				Camera.main.orthographicSize = Camera.main.orthographicSize + zoom * 5f;
+				if (DEBUG) Debug.Log("in");
+			}
 		}
+	}
 
-		else if (zoom < 0f && currentSize > min_zoom) // zoom out
-		{
-			Camera.main.orthographicSize = Camera.main.orthographicSize + zoom * 5f;
-			if (DEBUG) Debug.Log("in");
-		}
-
+	public void enableZoom(bool b)
+	{
+		zoomEnabled = b;
 	}
 }

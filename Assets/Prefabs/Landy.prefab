@@ -30,7 +30,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1431561368767092
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1695167894075422
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +491,7 @@ MonoBehaviour:
   ch: {fileID: 4613421742135462}
   came: {fileID: 4905243702468910}
   maxdis: 0.2
+  zoomEnabled: 1
 --- !u!114 &114233691368742814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -550,7 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   originRot: {x: 0, y: 0, z: 0, w: 0}
-  SceneIndex: 0
+  SceneIndex: 4
   isRandom: 0
 --- !u!114 &114872922327731354
 MonoBehaviour:

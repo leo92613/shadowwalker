@@ -62,6 +62,7 @@ public class Anchar : MonoBehaviour
 
 	void Update ()
 	{
+		// Debug.Log (CheckPoints.Count);
 		if (CheckPoints.Count == CheckPointsCount)
 			this.GetComponent<EndGame> ().NextLevel ();
 		isPressed = false;
