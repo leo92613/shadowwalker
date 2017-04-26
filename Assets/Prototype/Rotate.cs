@@ -16,6 +16,7 @@ public class Rotate : Cube {
 	public Vector3 rot;
 	public Material idlemateral;
 	public bool isWorld = true;
+	public bool isMenu = false;
 	public bool RotationEnable {
 		set {
 			rotationenable = value;
@@ -80,6 +81,8 @@ public class Rotate : Cube {
 		}
 		moveControl.enabled = true;
 		Anchar.Instance.isAbled = true;
+		if (isMenu)
+			this.gameObject.GetComponent<EndGame> ().NextLevel();
 	}
 
 	public void StartRotate(){

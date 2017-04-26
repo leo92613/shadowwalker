@@ -166,7 +166,8 @@ Prefab:
       propertyPath: isWorld
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 82803846877900752, guid: 24d5557dff4f74060abfe2e03d77c7e8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 24d5557dff4f74060abfe2e03d77c7e8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &777421006
@@ -223,7 +224,8 @@ Prefab:
       propertyPath: isWorld
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 82803846877900752, guid: 24d5557dff4f74060abfe2e03d77c7e8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 24d5557dff4f74060abfe2e03d77c7e8, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &777421007 stripped

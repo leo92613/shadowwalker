@@ -61,6 +61,7 @@ public class CharMove : MonoBehaviour
 			{
 				if (hit.transform.GetComponent<CheckPoint>() && (!hit.transform.GetComponent<CheckPoint>().IsHit))
 				{
+					hit.transform.GetComponent<AudioSource> ().Play ();
 					anchar.AddCheckpoint(hit.transform.GetComponent<CheckPoint>());
 					hit.transform.GetComponent<CheckPoint>().IsHit = true;
 					Anchar.Instance.RecordCheckpoint(hit.transform.GetComponent<CheckPoint>());

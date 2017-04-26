@@ -43,6 +43,7 @@ public class Anchar : MonoBehaviour
 	public static event TriggerRotation TriggeredRotation;
 	public bool isAbled = true;
 	public Material anchorhit;
+	public int MenuScene;
 
 	private Ray ray;
 	private RaycastHit hit;
@@ -82,6 +83,10 @@ public class Anchar : MonoBehaviour
 				UndoList [UndoList.Count - 1].UndoRotate ();
 				UndoList.RemoveAt (UndoList.Count - 1);
 			}
+		}
+
+		if (Input.GetKeyDown (KeyCode.M)) {
+			SceneManager.LoadScene(MenuScene);
 		}
 	}
 	// Update is called once per frame
@@ -132,6 +137,7 @@ public class Anchar : MonoBehaviour
 				if (isPressed) {
 					isPressed = false;
 					onRotate ();
+
 				}
 
 			}
