@@ -257,25 +257,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114718015285880888, guid: a11eee3039dc14a0b946e9961a153c41,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4905243702468910, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.0026179885
-      objectReference: {fileID: 0}
-    - target: {fileID: 4905243702468910, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999966
-      objectReference: {fileID: 0}
-    - target: {fileID: 4905243702468910, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114718015285880888, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a11eee3039dc14a0b946e9961a153c41, type: 2}
   m_IsPrefabParent: 0
 --- !u!20 &437502949 stripped
@@ -334,26 +316,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1873297312909054, guid: a11eee3039dc14a0b946e9961a153c41,
     type: 2}
   m_PrefabInternal: {fileID: 437502948}
---- !u!1 &1156566754 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1431561368767092, guid: a11eee3039dc14a0b946e9961a153c41,
-    type: 2}
-  m_PrefabInternal: {fileID: 437502948}
---- !u!114 &1156566756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1156566754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f85d2e67d4a84a5cb2e045446508043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 0}
-  originRot: {x: 0, y: 0, z: 0, w: 0}
-  SceneIndex: 0
-  isRandom: 0
 --- !u!1 &1685133660
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/ArrowKeyandSpaceKey.unity
     guid: 2f4716300c6e14c07a79c608bf9a6063
   - enabled: 1
-    path: Assets/Scenes/FindTheLight.unity
-    guid: 1af1971fe926249c29575645db67233e
+    path: Assets/Scenes/RKey.unity
+    guid: 76456c21d92374580808b4edfdc93ea4
   - enabled: 1
     path: Assets/Scenes/retro_Level_1.unity
     guid: 0a69ae1ccc993458a8d2518b50ac327e
@@ -21,11 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/retro_Level_2.unity
     guid: 413e7cbca710643ba8c6ee33696f5652
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: a20b82a7f30c74d2ab5a13430f18c4fa
+  - enabled: 1
     path: Assets/Scenes/retro_Level_3.unity
     guid: 23a045e1f2ec74d2e9ffe8fb5f46e6b1
-  - enabled: 1
-    path: Assets/Scenes/RKey.unity
-    guid: 76456c21d92374580808b4edfdc93ea4
   - enabled: 1
     path: Assets/Scenes/retro_Level_4.unity
     guid: dc04424d7d0bb46349f5e871e28cb39c
@@ -35,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/retro_Level_6.unity
     guid: 813a6727cf8934845b69bb9e556327df
-  - enabled: 0
-    path: Assets/Scenes/level_template.unity
-    guid: a612d5581111849648178d25883903c4
   - enabled: 1
     path: Assets/Scenes/retro_Level_7.unity
     guid: 85626219ebf9a418fa6e4f04e55da2d3
@@ -50,3 +47,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/retro_Level_10.unity
     guid: 10bbb11c0ce0c402bb2fae37c6bbabd1
+  - enabled: 1
+    path: Assets/Scenes/retro_Level_11.unity
+    guid: a5016602e0f9b46beac6ce9d975703f1
+  - enabled: 1
+    path: Assets/Scenes/interesting PCG.unity
+    guid: 257fba9c3480c4f87ab6fcc1a122dc28
+  - enabled: 1
+    path: Assets/Scenes/PCGIntro.unity
+    guid: ea84a0194102047ad976afb8f3b9c741
+  - enabled: 1
+    path: Assets/Scenes/level_template.unity
+    guid: a612d5581111849648178d25883903c4

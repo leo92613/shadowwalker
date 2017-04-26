@@ -469,9 +469,10 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "\n\n\n\nUse <#ffff00>R KEY</color> to <#ffff00>Try The level again</color>
-    \n\nUse <#ffff00>U KEY</color> to <#ffff00>Time Travel</color>\n\nUse <#ffff00>Mouse
-    Scroll</color> to <#ffff00>zoom in and zoom out</color> \n\n\n\n\n\nPRESS <#ffff00>SPACE
-    KEY</color> to <#ffff00>CONTINUE</color> "
+    \n\nUse <#ffff00>U KEY</color> to <#ffff00>Undo</color>\n\nUse <#ffff00>M KEY</color>
+    to <#ffff00>return to Main menu</color>\n\nUse <#ffff00>Mouse Scroll</color> to
+    <#ffff00>zoom in and zoom out</color> \n\n\n\n\nPRESS <#ffff00>SPACE KEY</color>
+    to <#ffff00>CONTINUE</color> "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
@@ -516,7 +517,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 138
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_enableKerning: 1
@@ -538,12 +539,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 140
+    characterCount: 166
     spriteCount: 0
-    spaceCount: 41
-    wordCount: 29
+    spaceCount: 48
+    wordCount: 36
     linkCount: 0
-    lineCount: 15
+    lineCount: 16
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -755,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0797cd1ea98144c86a727c8dbee96995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndex: 7
+  SceneIndex: 3
 --- !u!4 &1969942357
 Transform:
   m_ObjectHideFlags: 0

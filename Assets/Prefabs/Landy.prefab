@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4527666998670144}
   - component: {fileID: 114685432082641888}
-  - component: {fileID: 114718015285880888}
+  - component: {fileID: 114855775438414548}
   m_Layer: 0
   m_Name: HitAnchor
   m_TagString: Untagged
@@ -172,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873297312909054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: -15}
+  m_LocalPosition: {x: 0, y: -0, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4837789917033374}
@@ -219,7 +219,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.86764705, g: 1, b: 0.98357, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   CheckPointsCount: 2
   isAbled: 1
   anchorhit: {fileID: 2100000, guid: e6e07d1a3bca443118f6bdcc2ba38b40, type: 2}
---- !u!114 &114718015285880888
+--- !u!114 &114855775438414548
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
