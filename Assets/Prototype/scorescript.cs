@@ -22,7 +22,7 @@ public class scorescript : MonoBehaviour
         if (GameObject.Find("HitAnchor") != null)
         {
             if (DEBUG) Debug.Log("hello");
-			GetComponent<TMP_Text>().text = "LIGHTS: " + (numCheckpoints ) + "/" + (total );
+			GetComponent<TMP_Text>().text = "TREASURES: " + (numCheckpoints ) + "/" + (total );
             if (DEBUG) Debug.Log("current score " + total);
         }
     }

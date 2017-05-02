@@ -23,7 +23,7 @@ public class CheckPoint : Cube {
 		base.Start ();
 		quad = GameObject.Find ("Quad");
 		children = transform.GetComponentsInChildren<Transform> ();
-        pastMaterial = Resources.Load("Materials/PassCheckpoint", typeof(Material)) as Material;
+        pastMaterial = Resources.Load("Materials/OpenChest", typeof(Material)) as Material;
 	}
 
 	void Update()

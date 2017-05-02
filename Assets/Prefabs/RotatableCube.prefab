@@ -109,8 +109,9 @@ MonoBehaviour:
   parent: {fileID: 0}
   originRot: {x: 0, y: 0, z: 0, w: 0}
   rot: {x: 90, y: 0, z: 0}
-  idlemateral: {fileID: 2100000, guid: 861a13d074d6942e39ad3c9dec4b6a16, type: 2}
+  idlemateral: {fileID: 2100000, guid: b9924142389814d4ebae7faaca66e199, type: 2}
   isWorld: 1
+  isMenu: 0
 --- !u!114 &114749419670028248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,4 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94bd334d41c2d438cb3703b4ca33c93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Active: {fileID: 2100000, guid: e6e07d1a3bca443118f6bdcc2ba38b40, type: 2}
+  Active: {fileID: 2100000, guid: f8447730eb03f4d74a2166772338dd74, type: 2}

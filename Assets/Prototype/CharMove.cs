@@ -37,22 +37,22 @@ public class CharMove : MonoBehaviour
 			if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
 			{
 				isPressed = true;
-				anchor.localPosition = new Vector3(0, -0.1f, 0);
+				anchor.localPosition = new Vector3(0, -0.3f, 0);
 			}
 			if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
 			{
 				isPressed = true;
-				anchor.localPosition = new Vector3(0, 0.1f, 0);
+				anchor.localPosition = new Vector3(0, 0.3f, 0);
 			}
 			if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a"))
 			{
-				anchor.localPosition = new Vector3(-0.1f, 0, 0);
+				anchor.localPosition = new Vector3(-0.3f, 0, 0);
 				isPressed = true;
 				sprite.flipX = true;
 			}
 			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d"))
 			{
-				anchor.localPosition = new Vector3(0.1f, 0, 0);
+				anchor.localPosition = new Vector3(0.3f, 0, 0);
 				isPressed = true;
 				sprite.flipX = false;
 			}
@@ -66,13 +66,8 @@ public class CharMove : MonoBehaviour
 					hit.transform.GetComponent<CheckPoint>().IsHit = true;
 					Anchar.Instance.RecordCheckpoint(hit.transform.GetComponent<CheckPoint>());
 				}
-
-				//			if (hit.transform.GetComponent<ChangeCameraSize> ())
-				//				hit.transform.GetComponent<ChangeCameraSize> ().ChangeCamera  = true;
-				//			if (hit.transform.GetComponent<EndGame> ()) {
-				//				hit.transform.GetComponent<EndGame> ().End= true;
-				//			}
-				this.transform.position += anchor.localPosition;
+					
+				this.transform.position += anchor.localPosition * 0.3333f;
 			}
 			sprite.sprite = idleSprite;
 			if (!isPressed)

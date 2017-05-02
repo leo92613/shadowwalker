@@ -9,6 +9,7 @@ public class Anchar : MonoBehaviour
 	private static Anchar instance = null;
 	private List<CheckPoint> CheckPoints = new List<CheckPoint>();
 	private List<Rotate> UndoList = new List<Rotate> ();
+	private Transform Landy;
 	//private Rotate lastRotate;
 	public int CheckPointsCount;
 
@@ -54,11 +55,14 @@ public class Anchar : MonoBehaviour
 	void Start ()
 	{
 		CheckPoints = new List<CheckPoint>();
+		Landy = GameObject.Find ("Landy").transform;
+
 	}
 
 	public void SetCheckPoint()
 	{
 		CheckPointsCount = GameObject.FindObjectsOfType<CheckPoint> ().Length;
+
 	}
 
 	void Update ()
@@ -68,7 +72,7 @@ public class Anchar : MonoBehaviour
 			this.GetComponent<EndGame> ().NextLevel ();
 		isPressed = false;
 		hitobject = null;
-		ray = new Ray (transform.position, Vector3.forward);
+		ray = new Ray (Landy.position, Vector3.forward);
 		if (Physics.Raycast (ray, out hit,100f,LayerMask.GetMask("Default"))) {
 			hitobject = hit.transform.gameObject;
 		}

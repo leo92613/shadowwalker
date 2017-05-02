@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 33451052866448952}
   - component: {fileID: 64767395308389878}
   - component: {fileID: 23859235054947690}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,8 +146,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1537911251320550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.39, y: 3.24, z: 0.36}
-  m_LocalScale: {x: 4.8262224, y: 4.8262224, z: 4.8262224}
+  m_LocalPosition: {x: -1.51, y: 3.24, z: 50}
+  m_LocalScale: {x: 20.658407, y: 19.821545, z: 7.469707}
   m_Children: []
   m_Father: {fileID: 4905243702468910}
   m_RootOrder: 0
@@ -172,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873297312909054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: -15}
+  m_LocalPosition: {x: 5, y: -0, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4837789917033374}
@@ -291,7 +291,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: cec07e27979064d6ab25c27b8134dec2, type: 2}
+  - {fileID: 2100000, guid: 18bdf16cf42bc44528fe7748de1bacc2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CheckPointsCount: 2
   isAbled: 1
-  anchorhit: {fileID: 2100000, guid: e6e07d1a3bca443118f6bdcc2ba38b40, type: 2}
+  anchorhit: {fileID: 2100000, guid: f8447730eb03f4d74a2166772338dd74, type: 2}
 --- !u!114 &114855775438414548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -551,8 +551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   originRot: {x: 0, y: 0, z: 0, w: 0}
-  SceneIndex: 0
-  isRandom: 0
+  SceneIndex: 12
+  isRandom: 1
 --- !u!114 &114872922327731354
 MonoBehaviour:
   m_ObjectHideFlags: 1
