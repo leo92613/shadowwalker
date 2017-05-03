@@ -9,17 +9,32 @@ EditorBuildSettings:
     path: Assets/Scenes/Opening.unity
     guid: a92c7474bafc743fa9ad3cb031b509e6
   - enabled: 1
+    path: Assets/Scenes/VideoPlay1.unity
+    guid: 516985575828e47cca5eb041a04a492e
+  - enabled: 1
+    path: Assets/Scenes/VideoPlay2.unity
+    guid: f97c47bf906dc446eb379925fb43960e
+  - enabled: 1
+    path: Assets/Scenes/VideoPlay3.unity
+    guid: 53ebf3f28a951424d9cf5c686d00edf4
+  - enabled: 1
+    path: Assets/Scenes/VideoPlay5.unity
+    guid: 14598206deadc4c11839c130fb081734
+  - enabled: 1
     path: Assets/Scenes/ArrowKeyandSpaceKey.unity
     guid: 2f4716300c6e14c07a79c608bf9a6063
   - enabled: 1
     path: Assets/Scenes/RKey.unity
     guid: 76456c21d92374580808b4edfdc93ea4
   - enabled: 1
-    path: Assets/Scenes/retro_Level_1.unity
+    path: Assets/Scenes/Tutorial1.unity
     guid: 0a69ae1ccc993458a8d2518b50ac327e
   - enabled: 1
-    path: Assets/Scenes/retro_Level_2.unity
+    path: Assets/Scenes/Tutorial2.unity
     guid: 413e7cbca710643ba8c6ee33696f5652
+  - enabled: 1
+    path: Assets/Scenes/Tutorial3.unity
+    guid: 0d1264e3ae9be4661ae5c9bdd91ef3d5
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a20b82a7f30c74d2ab5a13430f18c4fa
@@ -33,11 +48,11 @@ EditorBuildSettings:
     path: Assets/Scenes/retro_Level_5.unity
     guid: 99bb1ae0acb34486a83a09551956541e
   - enabled: 1
-    path: Assets/Scenes/retro_Level_6.unity
-    guid: 813a6727cf8934845b69bb9e556327df
-  - enabled: 1
     path: Assets/Scenes/retro_Level_7.unity
     guid: 85626219ebf9a418fa6e4f04e55da2d3
+  - enabled: 1
+    path: Assets/Scenes/retro_Level_6.unity
+    guid: 813a6727cf8934845b69bb9e556327df
   - enabled: 1
     path: Assets/Scenes/retro_Level_8.unity
     guid: e762ca2ab0cfd43dcb28fdd655005189
@@ -51,11 +66,14 @@ EditorBuildSettings:
     path: Assets/Scenes/retro_Level_11.unity
     guid: a5016602e0f9b46beac6ce9d975703f1
   - enabled: 1
-    path: Assets/Scenes/interesting PCG.unity
-    guid: 257fba9c3480c4f87ab6fcc1a122dc28
-  - enabled: 1
     path: Assets/Scenes/PCGIntro.unity
     guid: ea84a0194102047ad976afb8f3b9c741
   - enabled: 1
     path: Assets/Scenes/level_template.unity
     guid: a612d5581111849648178d25883903c4
+  - enabled: 1
+    path: Assets/Scenes/FindTheLight.unity
+    guid: 1af1971fe926249c29575645db67233e
+  - enabled: 1
+    path: Assets/Scenes/VideoPlay4.unity
+    guid: 049bc0ab919be4b3f83518f8cbfdd241

@@ -17,4 +17,5 @@ public class EnterGame : MonoBehaviour {
 			SceneManager.LoadScene (SceneIndex);
 			
 	}
+		
 }

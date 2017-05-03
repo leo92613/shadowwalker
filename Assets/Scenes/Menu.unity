@@ -1351,8 +1351,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   originRot: {x: 0, y: 0, z: 0, w: 0}
-  SceneIndex: 16
+  SceneIndex: 20
   isRandom: 0
+  menu: 1
 --- !u!4 &1955491341 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4828391823245414, guid: 24d5557dff4f74060abfe2e03d77c7e8,
@@ -1376,8 +1377,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   originRot: {x: 0, y: 0, z: 0, w: 0}
-  SceneIndex: 6
+  SceneIndex: 22
   isRandom: 0
+  menu: 1
 --- !u!4 &2027263073 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4828391823245414, guid: 24d5557dff4f74060abfe2e03d77c7e8,

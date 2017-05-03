@@ -44,7 +44,7 @@ public class Anchar : MonoBehaviour
 	public static event TriggerRotation TriggeredRotation;
 	public bool isAbled = true;
 	public Material anchorhit;
-	private int MenuScene = 5;
+	private int MenuScene = 10;
 
 	private Ray ray;
 	private RaycastHit hit;

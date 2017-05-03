@@ -11,6 +11,7 @@ public class EndGame : Cube {
 
 	private CharMove moveControl;
 	private bool end;
+	public bool menu = false;
 
 	public bool End {
 		set {
@@ -26,10 +27,10 @@ public class EndGame : Cube {
 		if (this.GetComponent<AudioSource> ())
 			this.GetComponent<AudioSource> ().Play ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.I))
+		if (Input.GetKeyDown (KeyCode.N))
 			NextLevel ();
 //		if (end) {
 //			this.GetComponent<ShowMaterial> ().Activate ();
@@ -45,6 +46,8 @@ public class EndGame : Cube {
 		if (isRandom)
 			return;
 		moveControl.enabled = false;
+		if (menu)
+			SceneManager.LoadScene(SceneIndex);
 		StartCoroutine (EndG ());
 	}
 

@@ -248,11 +248,11 @@ MonoBehaviour:
 
 
 
-    Landy in now in a CHaotic world
+    Landy is now in a CHaotic world
 
 
     use <#cdd269>r key</color> <#cdd269></color>if you can''t find a path to all the
-    lights
+    Treasures
 
 
     HInt: use <#cdd269>undo</color><#cdd269></color> wisely
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 118
+  m_firstOverflowCharacterIndex: 121
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_enableKerning: 1
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 146
+    characterCount: 149
     spriteCount: 0
     spaceCount: 40
     wordCount: 30
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0797cd1ea98144c86a727c8dbee96995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndex: 17
+  SceneIndex: 21
 --- !u!4 &1944095005
 Transform:
   m_ObjectHideFlags: 0

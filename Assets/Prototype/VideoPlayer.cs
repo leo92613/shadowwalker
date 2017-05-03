@@ -14,7 +14,7 @@ public class VideoPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Debug.Log (movie.isPlaying);
-		if (!movie.isPlaying )
+		if (!movie.isPlaying)
 			movie.Play ();
 	}
 }
