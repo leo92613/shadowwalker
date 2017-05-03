@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/interesting PCG.unity
+- path: Assets/Scenes/VideoPlay.unity
   isLoaded: 1
   isActive: 1

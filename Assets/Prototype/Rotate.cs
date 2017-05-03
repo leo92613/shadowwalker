@@ -12,6 +12,7 @@ public class Rotate : Cube {
 	private List<CheckPoint> cps = new List<CheckPoint>();
 	private List<int> cpc = new List<int> ();
 	private int cpcount = 0;
+	private GameObject undoeffect;
 
 	public Vector3 rot;
 	public Material idlemateral;
@@ -42,6 +43,7 @@ public class Rotate : Cube {
 		//moveControl = GameObject.Find ("Landy").GetComponent<CharMove> ();
 		moveControl = GameObject.FindGameObjectWithTag("GameController").GetComponent<CharMove>();
 		au = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource> ();
+		undoeffect = GameObject.Find ("UndoEffect");
 	}
 
 	void OnEnable(){
@@ -91,6 +93,8 @@ public class Rotate : Cube {
 		}
 		if (!Activated)
 			return;
+		Debug.Log (au.pitch);
+		au.pitch = 1.24f + Random.Range (-0.1f, 0.2f);
 		au.Play ();
 		moveControl.enabled = false;
 		Anchar.Instance.isAbled = false;
@@ -105,6 +109,9 @@ public class Rotate : Cube {
 		}
 		UndoCP ();
 		GameObject.FindGameObjectWithTag ("GameController").transform.position = new Vector3 (transform.position.x, transform.position.y, -15f);
+		undoeffect.transform.position = new Vector3 (transform.position.x, transform.position.y, -5f);
+		undoeffect.GetComponent<ParticleSystem> ().Play ();
+		undoeffect.GetComponent<AudioSource> ().Play ();
 	}
 
 	public void RemoteRotate(){
